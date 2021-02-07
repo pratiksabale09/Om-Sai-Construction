@@ -44,18 +44,35 @@ button {
     }   
 </style>   
 </head>    
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }else if(name!="Devidas Sabale" || password!="9421007195"){
+    alert("Invalid login credentials");
+    return false;
+  }
+}  
+</script>  
 <body>    
     <center> <h1> Admin Access </h1> </center>   
-    <form>  
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
         <div class="container">   
-            <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Name : </label>   
+            <input type="text" placeholder="Enter Username" name="name" required>  
             <label>Password : </label>   
             <input type="password" placeholder="Enter Password" name="password" required>  
-            <button type="submit">Login</button>   
+            <button type="submit" value="register"><a href="loginhome.html">Login</button> 
             <input type="checkbox" checked="checked"> Remember me   
             <button type="button" class="cancelbtn"> Cancel</button>   
-            <a href="#"> Forgot password? </a>   
+            <a href="#">Forgot password? </a>   
         </div>   
     </form>     
 </body>     
