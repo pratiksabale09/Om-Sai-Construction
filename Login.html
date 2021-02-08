@@ -55,8 +55,16 @@ if (name==null || name==""){
 }else if(password.length<6){  
   alert("Password must be at least 6 characters long.");  
   return false;  
-  }else if(name!="Devidas Sabale" || password!="9421007195"){
-    alert("Invalid login credentials");
+  }else if(name=="Devidas Sabale" && password=="9421007195"){
+    return true;
+  }else if(name=="Pratik Sabale" && password=="9145750060"){
+    return true;
+  }else if(name=="Sumit Sabale" && password=="7350770822"){
+    return true;
+  }else if(name=="Madhura Dhage" && password=="70400054446"){
+    return true;
+  }else{
+    alert("Your access is denied my admin.");
     return false;
   }
 }  
