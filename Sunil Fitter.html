@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script>
+         //function that display value
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+    <style>
+            .register .nav-tabs .nav-link:hover{
+                border: none;
+            }
+            .text-align{
+                margin-top: -3%;
+                margin-bottom: -9%;
+
+                padding: 10%;
+                margin-left: 30%;
+            }
+            .form-new{
+                margin-right: 22%;
+                margin-left: 20%;
+            }
+            .register-heading{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register-heading h1{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register{
+                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+                margin-top: 3%;
+                padding: 3%;
+                border-radius: 2.5rem;
+            }
+            .btnSubmit
+            {
+                width: 50%;
+                border-radius: 1rem;
+                padding: 1.5%;
+                color: #fff;
+                background-color: #03612e;
+                border: none;
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+            }
+            #sheet {
+                margin-top: 30px;
+            }
+            <style>
+            .title{
+                margin-bottom: 10px;
+                text-align:center;
+                width: 210px;
+                color:green;
+                border: solid black 2px;
+            }
+  
+            input[type="button"]
+                {
+                background-color:green;
+                color: black;
+                border: solid black 2px;
+                width:100%
+                }
+  
+            input[type="text"]
+                {
+                background-color:white;
+                border: solid black 2px;
+                width:100%
+                }
+      </style>
+    </style>
+
+</head>
+<body>
+
+<div class="container register">
+    <div id="sheet">
+    <iframe style="width:100%;height:400px;" style="border:0;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTafKwy2REhb2LIydQGE_fhPwdyv0nDEDxN-M6wA4-RLvlLO3TMQI6E8V1h45BGoHiuWs1umw1IMVs/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+    <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class = title >Calculator</div>
+      <table border="1">
+         <tr>
+            <td colspan="3"><input type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td>
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td>
+            <td><input type="button" value="*" onclick="dis('*')"/> </td>
+         </tr>
+      </table>
+        <form method="post" autocomplete="off" name="Sunil Fitter">
+            <div>
+                <span class="form-group">
+                    <input type="text" name="Date" class="form-control" placeholder="Date" value=""/>
+                </span>
+                <span class="form-group">
+                    <input type="text" name="Present/Absent" class="form-control" placeholder="Present/absent" value=""/>
+                </span>
+                <span class="form-group">
+                    <input type="text" name="Work" class="form-control" placeholder="Work" value=""/>
+                </span>
+                    <span class="form-group">
+                <input type="text" name="Amount" class="form-control" placeholder="Amount" value=""/>
+                    </span>
+                <span class="form-group">
+                    <input type="submit" name="submit" class="btnSubmit btn-block" value="Submit" />
+                </span>
+                </div>
+            <div>
+                <span class="form-group">
+                    <input type="text" name="Advance" class="form-control" placeholder="Advance" value=""/>
+                </span>
+                    <span class="form-group">
+                <input type="text" name="Pay Status" class="form-control" placeholder="Pay Status" value=""/>
+                    </span>
+                </div>
+        </form>
+    </div>
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxaBOjPGe71Ex2IfQyCBtEb1EaDv6f3mdt-RvRh68c_G0VM_StuBJOLJDTuISyt_Zi3/exec'
+            const form = document.forms['Sunil Fitter']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Recorded"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
