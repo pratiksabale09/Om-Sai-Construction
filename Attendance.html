@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome Admin</title>
+<style>
+#img {
+	width: 200px;
+	height: 120px;
+}
+#button1 { 
+		position: relative;
+		margin-top: 10px;
+        background-color: #4CAF50;   
+        width: 200px;     
+        padding: 15px;      
+        border: none;   
+        cursor: pointer;
+
+        }   
+  
+#button1:hover {   
+        opacity: 0.7;   
+    } 
+	.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+}
+
+</style>
+<script>
+	/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+	<center><div><a><img id="img" src="logo.png"></a></div>
+		<h1>Welcome Admin,</h1>
+  <button onclick="myFunction()" class="dropbtn">Manage Expenses</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://docs.google.com/spreadsheets/d/1dJuLko3C49v2srtVn44eiAOIcGUOsYMjDw8MP5UiTpA/edit?usp=sharing.html">Mr. Sawant</a>
+  </div>
+  <h1>Attendance</h1>
+  <div><a href="Sunil Fitter.html"><button id="button1">Sunil Fitter</button></a></div>
+  <div><a href="Suresh Mistri.html"><button id="button1">Suresh Mistri</button></a></div>
+  <div><a href="Anand Mistri.html"><button id="button1">Anand Mistri</button></a></div>
+  <div><a href="S M Hari.html"><button id="button1">S M Hari</button></a></div>
+  <div><a href="Sandeep Bigari.html"><button id="button1">Sandeep Bigari</button></a></div>
+  <div><a href="Vinod.html"><button id="button1">Vinod</button></a></div></center>
+</body>
+</html>
