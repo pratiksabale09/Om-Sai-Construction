@@ -55,6 +55,15 @@ height: 15px;
 }
 </style>
 <body>
+<script src="demo.js"></script>
+  <script>
+    var uid = sessionStorage.getItem("uid");
+    if(uid==null)
+    {
+      location.replace('Login1.html')
+      alert("Please login first!")
+    }
+  </script>
 <div id="box">
 <div class="column"></div>
 <div class="column">

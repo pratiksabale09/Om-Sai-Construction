@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-$server="localhost";
-$userid ="root";
-$Password = "";
-$myDB = "ems";
+
+$server="fdb32.awardspace.net";
+$userid ="3992918_pratik";
+$Password = "Xcen@123";
+$myDB = "3992918_pratik";
 $con = mysqli_connect($server,$userid,$Password,$myDB);
 if (mysqli_connect_errno()) {
 # code...
@@ -50,6 +51,15 @@ body {
 </style>
 </head>
 <body>
+<script src="demo.js"></script>
+  <script>
+    var uid = sessionStorage.getItem("uid");
+    if(uid==null)
+    {
+      location.replace('Login1.html')
+      alert("Please login first!")
+    }
+  </script>
 	<center><div><a><img id="img" src="logo.png"></a></div>
 	<h1>Add labour</h1>
 	<div class="form-group">  

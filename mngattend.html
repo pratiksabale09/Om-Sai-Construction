@@ -74,7 +74,7 @@ body {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-}
+
 
 </style>
 <script>
@@ -84,6 +84,15 @@ toggle between hiding and showing the dropdown content */
 </script>
 </head>
 <body>
+  <script src="demo.js"></script>
+  <script>
+    var uid = sessionStorage.getItem("uid");
+    if(uid==null)
+    {
+      location.replace('Login1.html')
+      alert("Please login first!")
+    }
+  </script>
 	<center><div><a><img id="img" src="logo.png"></a></div>
 		<h1>Manage Attendance</h1>
   <div><a href="updateatt12.php"><button id="button1">Update Attendance</button></a></div>

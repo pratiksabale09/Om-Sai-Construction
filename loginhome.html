@@ -47,7 +47,7 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-}
+
 </style>
 <script>
 	/* When the user clicks on the button,
@@ -72,6 +72,15 @@ window.onclick = function(event) {
 </script>
 </head>
 <body>
+  <script src="demo.js"></script>
+  <script>
+    var uid = sessionStorage.getItem("uid");
+    if(uid==null)
+    {
+      location.replace('Login1.html')
+      alert("Please login first!")
+    }
+  </script>
 	<h1>Welcome Admin,</h1>
   <button onclick="myFunction()" class="dropbtn">Manage Expenses</button>
   <div id="myDropdown" class="dropdown-content">

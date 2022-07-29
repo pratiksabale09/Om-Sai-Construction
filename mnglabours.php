@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <?php
-$server="localhost";
-$userid ="root";
-$Password = "";
-$myDB = "ems";
+$server="fdb32.awardspace.net";
+$userid ="3992918_pratik";
+$Password = "Xcen@123";
+$myDB = "3992918_pratik";
 $con = mysqli_connect($server,$userid,$Password,$myDB);
 if (mysqli_connect_errno()) {
 # code...
@@ -107,6 +107,15 @@ function myFunction() {
 </script>
 </head>
 <body>
+<script src="demo.js"></script>
+  <script>
+    var uid = sessionStorage.getItem("uid");
+    if(uid==null)
+    {
+      location.replace('Login1.html')
+      alert("Please login first!")
+    }
+  </script>
 	<center><div><a><img id="img" src="logo.png"></a></div>
 		<h1>Manage Labours</h1>
     <form action="" method="POST">

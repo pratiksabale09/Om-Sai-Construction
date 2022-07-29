@@ -11,6 +11,15 @@
 </style>
 </head>
 <body>
+	<script src="demo.js"></script>
+	<script>
+	  var uid = sessionStorage.getItem("uid");
+	  if(uid==null)
+	  {
+		location.replace('Login1.html')
+		alert("Please login first!")
+	  }
+	</script>
 	<ol>
 		<li><a href="https://docs.google.com/spreadsheets/d/1dJuLko3C49v2srtVn44eiAOIcGUOsYMjDw8MP5UiTpA/edit?usp=sharing">Mr.Sawant</a></li>
 	</ol>
